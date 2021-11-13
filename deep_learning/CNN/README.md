@@ -58,31 +58,31 @@
 これがストライド2になると2つ間隔でフィルタが進むようになる。  
 ![image](https://deepage.net/img/convolutional_neural_network/stride2.gif)  
 　図より、ストライドを変えると出力の特徴マップのサイズが変わることが分かる。
-　出力サイズの高さ、幅を
+　出力サイズの高さ、幅を  
 ![\begin{align*}
 O_h, O_w
 \end{align*}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h%2C+O_w%0A%5Cend%7Balign%2A%7D%0A)
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h%2C+O_w%0A%5Cend%7Balign%2A%7D%0A)  
 
-として、フィルタサイズの高さと幅を
+として、フィルタサイズの高さと幅を  
 ![\begin{align*}
 F_h, F_w
 \end{align*}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AF_h%2C+F_w%0A%5Cend%7Balign%2A%7D%0A)
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AF_h%2C+F_w%0A%5Cend%7Balign%2A%7D%0A)  
 
-そして、パディング*P*を、ストライド*S*を とすると、
+そして、パディング*P*を、ストライド*S*を とすると、  
 ![\begin{align*}
 O_h = \frac{H + 2P - F_h}{S} +1\\
 O_w = \frac{W + 2P - F_w}{S} +1
 \end{align*}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h+%3D+%5Cfrac%7BH+%2B+2P+-+F_h%7D%7BS%7D+%2B1%5C%5C%0AO_w+%3D+%5Cfrac%7BW+%2B+2P+-+F_w%7D%7BS%7D+%2B1%0A%5Cend%7Balign%2A%7D%0A)
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h+%3D+%5Cfrac%7BH+%2B+2P+-+F_h%7D%7BS%7D+%2B1%5C%5C%0AO_w+%3D+%5Cfrac%7BW+%2B+2P+-+F_w%7D%7BS%7D+%2B1%0A%5Cend%7Balign%2A%7D%0A)  
 
-である。この計算式を使って入力サイズ4×4、フィルタサイズ2×2、パディング0、ストライド2の場合を計算してみると、
+である。この計算式を使って入力サイズ4×4、フィルタサイズ2×2、パディング0、ストライド2の場合を計算してみると、  
 ![\begin{align*}
 O_h = \frac{4 + 0 - 2}{2} +1 = 2 \\
 O_w = \frac{4 + 0 - 2}{2} +1 = 2
 \end{align*}
-](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h+%3D+%5Cfrac%7B4+%2B+0+-+2%7D%7B2%7D+%2B1+%3D+2+%5C%5C%0AO_w+%3D+%5Cfrac%7B4+%2B+0+-+2%7D%7B2%7D+%2B1+%3D+2%0A%5Cend%7Balign%2A%7D%0A)
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0AO_h+%3D+%5Cfrac%7B4+%2B+0+-+2%7D%7B2%7D+%2B1+%3D+2+%5C%5C%0AO_w+%3D+%5Cfrac%7B4+%2B+0+-+2%7D%7B2%7D+%2B1+%3D+2%0A%5Cend%7Balign%2A%7D%0A)  
 
 となり、先程のアニメーションと同様の結果となる。  
 ### 畳み込み（convolution）層
