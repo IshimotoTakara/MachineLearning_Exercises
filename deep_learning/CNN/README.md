@@ -57,8 +57,8 @@
 ![image](https://deepage.net/img/convolutional_neural_network/stride1.gif)  
 これがストライド2になると2つ間隔でフィルタが進むようになる。  
 ![image](https://deepage.net/img/convolutional_neural_network/stride2.gif)  
-　図より、ストライドを変えると出力の特徴マップのサイズが変わることが分かる。
-　出力サイズの高さ、幅を  
+　図より、ストライドを変えると出力の特徴マップのサイズが変わることが分かる。  
+　出力サイズの高さ、幅を
 ![\begin{align*}
 O_h, O_w
 \end{align*}
